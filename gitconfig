@@ -1,0 +1,86 @@
+[user]
+        name = Zack Penka
+
+        # BIG
+        #name = Zack Penka & Jacob Emerick
+        #name = Zack Penka & Moises Eskinazi
+        #name = Zack Penka & Thomas Lackemann
+        #name = Zack Penka & Manisha Patel
+        #name = Zack Penka & Han Qiu
+
+        # LIC
+        #name = Zack Penka & Daniel Berry
+        #name = Zack Penka & Elliot Foster
+        #name = Zack Penka & Vishal Gehani
+        #name = Zack Penka & Kyle Kochis
+        #name = Zack Penka & Ben Kovacevich
+        #name = Zack Penka & Ben Montgomery
+        #name = Zack Penka & Geoff Piper
+        #name = Zack Penka & Alan Wostenberg
+        #name = Zack Penka & Stefan Woskowiak
+        #name = Zack Penka & Joel Zimmer
+
+        # Email
+        email = zpenka@shutterstock.com
+        #email = zpenka@gmail.com
+[color]
+        diff = auto
+        status = auto
+        branch = auto
+        ui = true
+[core]
+        excludesfile = ~/.gitignore_global
+        editor = vim
+        pager = less
+[alias]
+        ap=add -p
+        co=checkout
+        ci=commit -v
+        s=status
+        st=status
+        b=branch
+        di=diff
+        f=fetch
+        fo=fetch origin
+        fu=fetch upstream
+        l=log
+        lp=log -p
+        m=merge
+        hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+        cr = diff -p --no-prefix -U1000
+        ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+        ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+        lnc = log --pretty=format:"%h\\ %s\\ [%cn]"
+        lds = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
+        la = "!git config -l | grep alias | cut -c 7-"
+        assume = update-index --assume-unchanged
+        unassume = update-index --no-assume-unchanged
+        assumed = "!git ls-files -v | grep ^h | cut -c 3-"
+        unassumeall = "!git assumed | xargs git update-index --no-assume-unchanged"
+[help]
+        autocorrect = 1
+[status]
+        short = false
+        branch = true
+[merge]
+        tool = opendiff
+[push]
+        default = current
+[color "diff-highlight"]
+        oldNormal = "red bold"
+        oldHighlight = "red bold 52"
+        newNormal = "green bold"
+        newHighlight = "green bold 22"
+[color "branch"]
+        current = yellow reverse
+        local = yellow
+        remote = green
+[color "diff"]
+        meta = yellow bold
+        frag = magenta bold
+        old = red bold
+        new = green bold
+[color "status"]
+        added = yellow
+        changed = green
+        untracked = cyan
