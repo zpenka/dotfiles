@@ -114,7 +114,7 @@ function speedtest() {
 }
 
 # Source local bashrc file
-source ./.bashrc-local
+source ~/.bashrc-local
 
 #
 # bash-prompt
