@@ -63,7 +63,7 @@
         short = false
         branch = true
 [merge]
-        tool = opendiff
+        tool = vimdiff
 [push]
         default = current
 [color "diff-highlight"]

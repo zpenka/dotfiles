@@ -27,6 +27,7 @@ alias hist='history | grep $1' # search history
 shopt -s histappend # When the shell exits, append to the history file instead of overwriting it
 
 # Implied flags
+alias vi='vim'
 alias mv='mv -iv'
 alias mkdir='mkdir -pv'
 alias ll='ls -alFh --color=auto --time-style=long-iso'
