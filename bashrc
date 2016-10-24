@@ -232,3 +232,5 @@ export PS1=$(set_ps1)
 
 export NVM_DIR="/home/zpenka/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+export PATH="$HOME/.yarn/bin:$PATH"
