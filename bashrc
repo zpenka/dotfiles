@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export PATH=$PATH:~/bin
+export PATH=$PATH:~/bin:/usr/local/pulse
 export EDITOR=/usr/bin/vim
 
 # Turn on 256 colors
