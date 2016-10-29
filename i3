@@ -163,9 +163,10 @@ for_window [class="^.*"] border pixel 2
 bindsym $mod+p exec "sleep 0.2; scrot -s -e 'mv $f /tmp/ && gimp /tmp/$f'"
 
 # system volume bindings
-bindsym $mod+comma exec amixer set Master -q 5%- unmute
-bindsym $mod+period exec amixer set Master -q 5%+ unmute
-bindsym $mod+m exec amixer set Master -q toggle
+bindsym $mod+comma exec pactl set-sink-volume @DEFAULT_SINK@ -2%; exec pactl set-sink-mute @DEFAULT_SINK@ 0;
+bindsym $mod+period exec pactl set-sink-volume @DEFAULT_SINK@ +2%; exec pactl set-sink-mute @DEFAULT_SINK@ 0;
+bindsym $mod+m exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym $mod+n exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
 
 # tab motion like chrome
 bindsym $mod+Tab workspace next
