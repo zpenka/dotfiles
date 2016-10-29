@@ -12,10 +12,10 @@ general {
 }
 
 order += "volume master"
-# order += "battery 1"
+order += "battery 1"
 order += "load"
 order += "disk /"
-order += "disk /home"
+#order += "disk /home"
 order += "ethernet _first_"
 order += "wireless _first_"
 order += "run_watch VPN"

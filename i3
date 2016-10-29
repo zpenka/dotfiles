@@ -153,7 +153,7 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         status_command i3status
-        font pango:Source\ Code\ Pro 13
+        font pango:Source\ Code\ Pro 11
 }
 
 # Disable window titlebars entirely
