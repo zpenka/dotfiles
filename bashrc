@@ -145,21 +145,26 @@ COLOR_LIGHT_CYAN='\[\e[96m\]'
 COLOR_WHITE='\[\e[97m\]'
 
 # Options
-SIR_COLOR=$COLOR_LIGHT_GRAY
-SHOW_CWD=false
-FULL_CWD=false
-CWD_COLOR=$COLOR_BLUE
+SHOW_USERNAME=true
+SHOW_HOSTNAME=true
+  NAME_DIVIDER="@"
+  USERNAME_COLOR=$COLOR_LIGHT_GREEN
+  HOSTNAME_COLOR=$COLOR_LIGHT_GREEN
+  NAME_DIVIDER_COLOR=$COLOR_LIGHT_CYAN
+SHOW_CWD=true
+  FULL_CWD=true
+  CWD_COLOR=$COLOR_LIGHT_YELLOW
 SHOW_GIT=true
-SHOW_GIT_DIRTY=true
-GIT_DIRTY_SYMBOL="¯\_(ツ)_/¯"
-GIT_DIRTY_COLOR=$COLOR_LIGHT_GREEN
-WRAP_BRANCH=false
-WRAP_BRANCH_SYMBOLS="[]"
-GIT_COLOR=$COLOR_LIGHT_RED
+  SHOW_GIT_DIRTY=true
+    GIT_DIRTY_SYMBOL=" ┬─┬ノ( º _ ºノ) "
+    GIT_DIRTY_COLOR=$COLOR_LIGHT_YELLOW
+  WRAP_BRANCH=false
+    WRAP_BRANCH_SYMBOLS="[]"
+  GIT_COLOR=$COLOR_LIGHT_BLUE
 SPACER=" > "
-SPACER_COLOR=$COLOR_WHITE
-SYMBOL="> "
-SYMBOL_COLOR=$COLOR_WHITE
+  SPACER_COLOR=$COLOR_LIGHT_GRAY
+SYMBOL=" $ "
+  SYMBOL_COLOR=$COLOR_WHITE
 
 # Return the current Git branch name (or false)
 function git_branch() {
@@ -196,9 +201,25 @@ function get_spacer() {
   firstItem=false
 }
 
-# Set bash prompt based on the values defined within options
+# Sets bash prompt based on the values defined within options
 function set_ps1() {
-  local name=${SIR_COLOR}"sir? "${COLOR_DEFAULT}
+  if $SHOW_USERNAME || $SHOW_HOSTNAME ; then
+    get_spacer
+
+    if $SHOW_USERNAME && $SHOW_HOSTNAME ; then
+      local divider=${NAME_DIVIDER_COLOR}${NAME_DIVIDER}${COLOR_DEFAULT}
+    fi
+
+    if $SHOW_USERNAME ; then
+      local username=${USERNAME_COLOR}"\u"${COLOR_DEFAULT}
+    fi
+
+    if $SHOW_HOSTNAME ; then
+      local hostname=${HOSTNAME_COLOR}"\h"${COLOR_DEFAULT}
+    fi
+
+    local name=${spacer}${username}${divider}${hostname}
+  fi
 
   if $SHOW_CWD ; then
     get_spacer
@@ -218,13 +239,13 @@ function set_ps1() {
     if $WRAP_BRANCH ; then
       local git=" "${GIT_COLOR}${WRAP_BRANCH_SYMBOLS:0:1}"\$(git_branch)"${WRAP_BRANCH_SYMBOLS:1:2}${COLOR_DEFAULT}
     else
-      local git=${GIT_COLOR}"\$(git_branch) "${COLOR_DEFAULT}
+      local git=${spacer}${GIT_COLOR}"\$(git_branch)"${COLOR_DEFAULT}
     fi
   fi
 
   local symbol=${SYMBOL_COLOR}${SYMBOL}${COLOR_DEFAULT}
 
-  echo "\$(on_git && echo \"${git}\"\$(git_dirty && echo \"${dirty}\")\$(echo \"${symbol}\"))${name}"
+  echo "${name}${cwd}\$(on_git && echo \"${git}\"\$(git_dirty && echo \"${dirty}\"))${symbol}"
 }
 
 export PS1=$(set_ps1)
