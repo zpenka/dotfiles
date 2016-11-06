@@ -179,7 +179,7 @@ exec_always nm-applet
 
 # Gaps
 # Set inner/outer gaps
-gaps inner 7
+gaps inner 20
 gaps outer 7
 
 # Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.
