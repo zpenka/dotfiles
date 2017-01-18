@@ -48,7 +48,7 @@ run_watch VPN {
 }
 
 tztime local {
-  format = "Local Time: %I:%M:%S %P %Y-%m-%d"
+  format = "EST: %I:%M:%S %P %Y-%m-%d"
 }
 
 tztime utc {
