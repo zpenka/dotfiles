@@ -45,3 +45,6 @@ set -g status-right-length 40
 #set -g status-left '#[fg=green]#(virtual-host 30)#[default]'
 #set -g status-right '#[fg=red][#(num-processors)]#[default] #[fg=yellow]#(cut -d " " -f 1-3 /proc/loadavg)#[default]  #[fg=blue]%H:%M:%S#[default]'
 
+bind '"' split-window -c "#{pane_current_path}"
+bind % split-window -h -c "#{pane_current_path}"
+bind c new-window -c "#{pane_current_path}"
