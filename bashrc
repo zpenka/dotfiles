@@ -60,6 +60,7 @@ alias lock='i3lock -c 000000 -n'
 # Monitor Management
 alias lsingle='~/.screenlayout/single.sh' # Adjust display to just laptop screen
 alias lwork='~/.screenlayout/work.sh' # Adjust display to work setup
+alias lhome='~/.screenlayout/home.sh' # Adjust display to home office setup
 
 alias wboth='~/.screenlayout/workstation-both.sh'
 alias w4k='~/.screenlayout/workstation-4k.sh'
