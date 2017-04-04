@@ -20,7 +20,7 @@ order += "ethernet _first_"
 order += "wireless _first_"
 order += "run_watch VPN"
 order += "tztime utc"
-order += "tztime mst"
+order += "tztime est"
 order += "tztime local"
 
 wireless _first_ {
@@ -47,8 +47,9 @@ run_watch VPN {
   pidfile = "/sys/class/net/tun0"
 }
 
-tztime local {
-  format = "EST: %I:%M:%S %P %Y-%m-%d"
+tztime est {
+  format = "EST: %I:%M:%S"
+  timezone = "America/New_York"
 }
 
 tztime utc {
@@ -56,9 +57,8 @@ tztime utc {
   timezone = "Etc/UTC"
 }
 
-tztime mst {
-  format = "MST: %I:%M:%S %P"
-  timezone = "America/Denver"
+tztime local {
+  format = "MST: %I:%M:%S%P %Y-%m-%d"
 }
 
 load {

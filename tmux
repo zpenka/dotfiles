@@ -19,6 +19,9 @@ bind l select-pane -R
 bind-key -r C-h select-window -t :-
 bind-key -r C-l select-window -t :+
 
+# Vim options
+set -sg escape-time 0
+
 # Reload key
 bind r source-file ~/.tmux.conf
 
