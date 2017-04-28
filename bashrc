@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export PATH=$PATH:~/bin:/usr/local/pulse
+export PATH=$PATH:~/bin
 export EDITOR=/usr/bin/vim
 
 # Turn on 256 colors
@@ -8,9 +8,6 @@ if [ "$TERM" = "xterm" ]
 then
   export TERM="xterm-256color"
 fi
-
-# Initialize nvm
-if test -f "/usr/share/nvm/init-nvm.sh"; then source /usr/share/nvm/init-nvm.sh; fi
 
 # Git tab completion
 if test -f "~/.git-tab-completion"; then source ~/.git-tab-completion; fi
