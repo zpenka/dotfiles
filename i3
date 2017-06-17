@@ -173,7 +173,7 @@ bindsym $mod+Tab workspace next
 bindsym $mod+Shift+Tab workspace prev
 workspace_auto_back_and_forth yes
 
-exec --no-startup-id feh --bg-scale ~/Drive/Images/eye.jpg
+exec --no-startup-id feh --bg-scale ~/Pictures/wallpaper.jpg
 
 exec_always nm-applet
 
