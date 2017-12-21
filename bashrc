@@ -22,6 +22,7 @@ export HISTCONTROL=ignoredups
 export HISTIGNORE="&:ls:exit:c:clear:ll:history:mixer:camus:cmus:~"
 alias hist='history | grep $1' # search history
 shopt -s histappend # When the shell exits, append to the history file instead of overwriting it
+export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
 
 # Implied flags
 alias vi='vim'
@@ -58,6 +59,7 @@ alias lock='i3lock -c 000000 -n'
 alias lsingle='~/.screenlayout/single.sh' # Adjust display to just laptop screen
 alias lwork='~/.screenlayout/work.sh' # Adjust display to work setup
 alias lhome='~/.screenlayout/home.sh' # Adjust display to home office setup
+alias l4k='~/.screenlayout/4k.sh'
 
 alias wboth='~/.screenlayout/workstation-both.sh'
 alias w4k='~/.screenlayout/workstation-4k.sh'
@@ -253,3 +255,4 @@ export NVM_DIR="/home/zpenka/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 export PATH="$HOME/.yarn/bin:$PATH"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
