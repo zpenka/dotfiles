@@ -1,9 +1,10 @@
 #!/bin/bash
 
-export PATH=$PATH:~/bin:/usr/local/bin/heroku
+export GOPATH=$HOME/go
+
+export PATH=$PATH:~/bin:/usr/local/bin/heroku:$GOPATH/bin
 export EDITOR=/usr/bin/vim
 
-export GOPATH=$HOME/go
 
 # Turn on 256 colors
 if [ "$TERM" = "xterm" ]
