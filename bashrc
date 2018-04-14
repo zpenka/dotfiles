@@ -3,6 +3,8 @@
 export PATH=$PATH:~/bin:/usr/local/bin/heroku
 export EDITOR=/usr/bin/vim
 
+export GOPATH=$HOME/go
+
 # Turn on 256 colors
 if [ "$TERM" = "xterm" ]
 then
