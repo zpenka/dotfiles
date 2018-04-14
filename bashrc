@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export PATH=$PATH:~/bin
+export PATH=$PATH:~/bin:/usr/local/bin/heroku
 export EDITOR=/usr/bin/vim
 
 # Turn on 256 colors
@@ -50,7 +50,7 @@ alias calc='bc -l'
 alias camus='cmus' # For the truly absurd
 
 # Arch Linux
-alias orphans='sudo pacman -Rns $(pacman -Qtdq)' # Removes orphaned packages and their config files
+# alias orphans='sudo pacman -Rns $(pacman -Qtdq)' # Removes orphaned packages and their config files
 
 # i3
 alias lock='i3lock -c 000000 -n'
