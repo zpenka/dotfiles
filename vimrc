@@ -86,6 +86,7 @@ set updatetime=250
 
 augroup autoformat_settings
   "autocmd FileType c,cpp,proto,javascript AutoFormatBuffer clang-format
+  autocmd FileType go AutoFormatBuffer gofmt
 augroup END
 
 let g:codefmt_clang_format_style = 'Google'
