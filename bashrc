@@ -1,7 +1,10 @@
 #!/bin/bash
 
-export PATH=$PATH:~/bin
+export GOPATH=$HOME/go
+
+export PATH=$PATH:~/bin:/usr/local/bin/heroku:$GOPATH/bin
 export EDITOR=/usr/bin/vim
+
 
 # Turn on 256 colors
 if [ "$TERM" = "xterm" ]
@@ -50,7 +53,7 @@ alias calc='bc -l'
 alias camus='cmus' # For the truly absurd
 
 # Arch Linux
-alias orphans='sudo pacman -Rns $(pacman -Qtdq)' # Removes orphaned packages and their config files
+# alias orphans='sudo pacman -Rns $(pacman -Qtdq)' # Removes orphaned packages and their config files
 
 # i3
 alias lock='i3lock -c 000000 -n'
