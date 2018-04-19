@@ -91,6 +91,8 @@ augroup END
 
 let g:codefmt_clang_format_style = 'Google'
 
+set wildignore+=*/tmp/*,*/node_modules/*,*.so,*.swp,*.zip
+
 " Machine-local vim settings - keep this at the end
 " --------------------------
 silent! source ~/.vimrc.local
