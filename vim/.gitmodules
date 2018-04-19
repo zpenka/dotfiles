@@ -74,3 +74,24 @@
 [submodule "bundle/supertab"]
 	path = bundle/supertab
 	url = https://github.com/ervandew/supertab.git
+[submodule "vim-fugitive"]
+  path = bundle/vim-fugitive
+  url = https://github.com/tpope/vim-fugitive
+[submodule "vim/bundle/vim-fugitive"]
+  path = bundle/vim-fugitive
+  url = https://github.com/tpope/vim-fugitive
+[submodule "vim/bundle/vim-markdown"]
+  path = bundle/vim-markdown
+  url = https://github.com/tpope/vim-markdown
+[submodule "vim/bundle/vim-colorschemes"]
+  path = bundle/vim-colorschemes
+  url = https://github.com/flazz/vim-colorschemes
+[submodule "vim/bundle/ale"]
+	path = bundle/ale
+	url = https://github.com/w0rp/ale
+[submodule "vim/bundle/vim-maktaba"]
+	path = bundle/vim-maktaba
+	url = https://github.com/google/vim-maktaba
+[submodule "vim/bundle/vim-codefmt"]
+	path = bundle/vim-codefmt
+	url = https://github.com/google/vim-codefmt
