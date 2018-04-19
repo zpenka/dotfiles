@@ -1,15 +1,13 @@
 # Anonymous Function
 snippet f
 	function(${1}) {${2}}
-snippet g
-	(${1}) => {${2}}
 snippet sit
 	it('${1}', function() {
 		${2}
 	});
 snippet it
-	it('${1}', function() {
-		${2}
+	it('${1}', function(done) {
+		${3}
 	});
 snippet desc
 	describe('${1}', function() {
@@ -17,8 +15,6 @@ snippet desc
 	});
 snippet cl
 	console.log('${1:}', $1);
-snippet co
-	console.log(`${1:}`);log
 snippet con
 	context('${1}', function() {
 		${2}
@@ -39,16 +35,6 @@ snippet before
 	before(function() {
 		${1}
 	});
-snippet ene
-	expect(err).to.not.exist();
-snippet ied
-	if(err) {
-	  return done(err);
-	}
-snippet ien
-	if(err) {
-	  return next(err);
-	}
 snippet frr
 	function(req, res, next) {
 		${1}
