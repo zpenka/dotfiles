@@ -1,3 +1,0 @@
-#! /usr/bin/env sh
-
-rsync -avz -e 'ssh' --stats --progress --exclude ".DS_Store" --exclude ".git" /home/zpenka/Git/work/bsp/web/ zpenka@zpenka.dev.bigstockcorp.net:~/Bigstock-Web/

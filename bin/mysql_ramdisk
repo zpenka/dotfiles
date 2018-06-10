@@ -1,8 +1,0 @@
-#!/bin/bash -ex
-
-mkdir -p /media/ramdisk
-mount -t tmpfs -o size=256m tmpfs /media/ramdisk
-systemctl stop mariadb
-cp -a /var/lib/mysql /media/ramdisk/
-mount -o bind /media/ramdisk/mysql /var/lib/mysql
-systemctl start mariadb
