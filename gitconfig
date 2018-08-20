@@ -1,8 +1,32 @@
 [user]
         name = Zack Penka
 
+        # BIG
+        #name = Zack Penka & Jacob Emerick
+
+        # LIC
+        #name = Zack Penka & Daniel Berry
+        #name = Zack Penka & Elliot Foster
+        #name = Zack Penka & Ben Kovacevich
+        #name = Zack Penka & Geoff Piper
+
+        # MISC
+        #name = Zack Penka & Steve Stodola
+
+        # RIP
+        #name = Zack Penka & Moises Eskinazi
+        #name = Zack Penka & Vishal Gehani
+        #name = Zack Penka & Kyle Kochis
+        #name = Zack Penka & Thomas Lackemann
+        #name = Zack Penka & Ben Montgomery
+        #name = Zack Penka & Manisha Patel
+        #name = Zack Penka & Han Qiu
+        #name = Zack Penka & Stefan Woskowiak
+        #name = Zack Penka & Alan Wostenberg
+        #name = Zack Penka & Joel Zimmer
+
         # Email
-        email = zpenka@gmail.com
+        email = zpenka@shutterstock.com
 [color]
         diff = auto
         status = auto
