@@ -36,9 +36,6 @@ set -g history-limit 100000
 set -g status-interval 10                 # Update every X seconds for the clock
 setw -g xterm on                          # Fix CTRL+Arrow in bash
 
-set -g default-command /bin/bash
-set -g default-shell /bin/bash
-
 # Theme
 set -g bell-action current
 set -g status-bg colour16
