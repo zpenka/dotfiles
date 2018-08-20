@@ -7,12 +7,15 @@
         # LIC
         #name = Zack Penka & Daniel Berry
         #name = Zack Penka & Elliot Foster
-        #name = Zack Penka & Vishal Gehani
         #name = Zack Penka & Ben Kovacevich
         #name = Zack Penka & Geoff Piper
 
+        # MISC
+        #name = Zack Penka & Steve Stodola
+
         # RIP
         #name = Zack Penka & Moises Eskinazi
+        #name = Zack Penka & Vishal Gehani
         #name = Zack Penka & Kyle Kochis
         #name = Zack Penka & Thomas Lackemann
         #name = Zack Penka & Ben Montgomery
@@ -23,7 +26,7 @@
         #name = Zack Penka & Joel Zimmer
 
         # Email
-        email = zpenka@gmail.com
+        email = zpenka@shutterstock.com
 [color]
         diff = auto
         status = auto
@@ -58,8 +61,6 @@
         unassume = update-index --no-assume-unchanged
         assumed = "!git ls-files -v | grep ^h | cut -c 3-"
         unassumeall = "!git assumed | xargs git update-index --no-assume-unchanged"
-[help]
-        autocorrect = 1
 [status]
         short = false
         branch = true
