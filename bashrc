@@ -73,6 +73,7 @@ alias whisper='echo "$1" | espeak -v en+whisper -s 120 -p -65 &> /dev/null' # wh
 # Docker
 alias docker_clean_images='docker rmi $(docker images -a --filter=dangling=true -q)' # Clean up all dangling images
 alias docker_clean_ps='docker rm $(docker ps --filter=status=exited --filter=status=created -q)' # Remove stopped containers
+alias docker_clean_all='docker system prune --volumes -f' # Nuclear option. clean everything
 
 # Git
 alias gim='vim $(git ls-files -m | grep -v "/build/") -p' # Open modified files tracked by Git in Vim
