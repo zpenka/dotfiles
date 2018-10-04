@@ -44,6 +44,7 @@
         st=status
         b=branch
         di=diff
+        dm=!git diff `git merge-base origin/master HEAD`
         f=fetch
         fo=fetch origin
         fu=fetch upstream
