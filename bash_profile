@@ -17,8 +17,6 @@ if test -f "~/.git-tab-completion"; then source ~/.git-tab-completion; fi
 set -o vi  # use vi mode
 bind -m vi-insert "\C-l":clear-screen # unbreak control+l in vi mode
 
-setxkbmap -option ctrl:nocaps # set caps lock to control
-
 export HISTFILESIZE=3000
 export HISTCONTROL=ignoredups
 export HISTIGNORE="&:ls:exit:c:clear:ll:history:mixer:camus:cmus:~"
@@ -30,17 +28,15 @@ export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; histor
 alias vi='vim'
 alias mv='mv -iv'
 alias mkdir='mkdir -pv'
-alias ll='ls -alFh --color=auto --time-style=long-iso'
+alias ll='ls -alFh'
 alias less='less -FSRXc'
 alias rsync='rsync --progress'
 alias jobs='jobs -l'
 alias ping='ping -c 5'
 alias wget='wget -c'
 alias grep='grep --color=auto'
-alias headers='curl -I'
 alias sockets='sudo lsof -i -P'
 alias ports='netstat -tulanp'
-alias mount='mount |column -t'
 
 # Laziness
 alias ~='cd ~'
@@ -51,37 +47,10 @@ alias calc='bc -l'
 
 alias camus='cmus' # For the truly absurd
 
-# Arch Linux
-# alias orphans='sudo pacman -Rns $(pacman -Qtdq)' # Removes orphaned packages and their config files
-
-# i3
-alias lock='i3lock -c 000000 -n'
-
-# Monitor Management
-alias lsingle='~/.screenlayout/single.sh' # Adjust display to just laptop screen
-alias lwork='~/.screenlayout/work.sh' # Adjust display to work setup
-alias lhome='~/.screenlayout/home.sh' # Adjust display to home office setup
-alias l4k='~/.screenlayout/4k.sh'
-
-alias wboth='~/.screenlayout/workstation-both.sh'
-alias w4k='~/.screenlayout/workstation-4k.sh'
-alias wdvi='~/.screenlayout/workstation-dvi.sh'
-
-alias say='echo "$1" | espeak -s 120 -p -65 &> /dev/null' # say things
-alias whisper='echo "$1" | espeak -v en+whisper -s 120 -p -65 &> /dev/null' # whisper things
-
 # Docker
 alias docker_clean_images='docker rmi $(docker images -a --filter=dangling=true -q)' # Clean up all dangling images
 alias docker_clean_ps='docker rm $(docker ps --filter=status=exited --filter=status=created -q)' # Remove stopped containers
 alias docker_clean_all='docker system prune --volumes -f' # Nuclear option. clean everything
-
-# Git
-alias gim='vim $(git ls-files -m | grep -v "/build/") -p' # Open modified files tracked by Git in Vim
-alias gitcm='git checkout master; git pull origin master; git branch --merged | grep -v "\*" | xargs -n 1 git branch -d' # Clean all Git branches that have been merged to master (clean merged)
-alias gitss='git diff --stat=120,100 origin/master...HEAD "$@"' # Show Git status of current branch against master (start stat)
-alias gitsd='git diff origin/master...HEAD "$@"' # Show Git diff of current branch against master (start diff)
-alias gitbm='git checkout master; git pull origin master; git checkout -b "$@"' # Cut a branch from remote master (branch master)
-alias gitcl='git log --color --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit' # Colorful Git log (color log)
 
 # Identify highest usage processes
 alias topmem='ps wwaxm -o pid,stat,vsize,rss,time,command | head -10'
@@ -117,8 +86,8 @@ function speedtest() {
   wget --output-document=/dev/null $location
 }
 
-# Source local bashrc file
-source ~/.bashrc-local
+# Source local bash_profile file
+source ~/.bash_profile-local
 
 #
 # bash-prompt
@@ -253,9 +222,6 @@ function set_ps1() {
 
 export PS1=$(set_ps1)
 
-
-export NVM_DIR="/home/zpenka/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
-export PATH="$HOME/.yarn/bin:$PATH"
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

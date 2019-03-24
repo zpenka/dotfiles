@@ -1,12 +1,11 @@
 #!/bin/bash
 
 # Symlink conf files to home dir, separating git from ~
-ln -s $PWD/bashrc /home/$USER/.bashrc
-ln -s $PWD/bashrc-local /home/$USER/.bashrc-local
-ln -s $PWD/gitconfig /home/$USER/.gitconfig
-ln -s $PWD/tmate /home/$USER/.tmate.conf
-ln -s $PWD/tmux /home/$USER/.tmux.conf
-ln -s $PWD/vim /home/$USER/.vim
-ln -s $PWD/vimrc /home/$USER/.vimrc
-ln -s $PWD/git-tab-completion /home/$USER/.git-tab-completion
-
+ln -s $PWD/bash_profile /Users/$USER/.bash_profile
+touch /Users/$USER/.bash_profile-local
+ln -s $PWD/gitconfig /Users/$USER/.gitconfig
+ln -s $PWD/tmate /Users/$USER/.tmate.conf
+ln -s $PWD/tmux /Users/$USER/.tmux.conf
+ln -s $PWD/vim /Users/$USER/.vim
+ln -s $PWD/vimrc /Users/$USER/.vimrc
+ln -s $PWD/git-tab-completion /Users/$USER/.git-tab-completion
