@@ -21,7 +21,6 @@ export HISTFILESIZE=3000
 export HISTCONTROL=ignoredups
 export HISTIGNORE="&:ls:exit:c:clear:ll:history:mixer:camus:cmus:~"
 alias hist='history | grep $1' # search history
-export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
 
 # Implied flags
 alias vi='vim'
