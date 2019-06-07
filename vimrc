@@ -73,6 +73,7 @@ set fileformat=unix
 set nolist
 set ignorecase
 let g:ctrlp_max_files = 0
+let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|svn|pyc))$'
 
 set foldmethod=syntax
 set foldlevel=20
