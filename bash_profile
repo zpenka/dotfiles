@@ -1,8 +1,9 @@
 #!/bin/bash
 
 export GOPATH=$HOME/go
+export BASH_SILENCE_DEPRECATION_WARNING=1
 
-export PATH=$PATH:~/bin:/usr/local/bin/heroku:$GOPATH/bin
+export PATH=$PATH:~/bin:/usr/local/bin/heroku:$GOPATH/bin:/usr/local/sbin
 export EDITOR=/usr/bin/vim
 
 # Turn on 256 colors
@@ -229,5 +230,3 @@ if [ -f '/Users/zpenka/Downloads/google-cloud-sdk/path.bash.inc' ]; then . '/Use
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/zpenka/Downloads/google-cloud-sdk/completion.bash.inc' ]; then . '/Users/zpenka/Downloads/google-cloud-sdk/completion.bash.inc'; fi
-
-alias preprod="ssh 10.1.0.10"
